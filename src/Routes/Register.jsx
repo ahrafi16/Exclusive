@@ -21,6 +21,10 @@ const Register = () => {
                 const user = result.user;
                 setUser(user);
                 alert("ACCOUNT CREATED SUCCESSFULLY!");
+                e.target.reset();
+                setError({});
+                //Naviget to home or another page after successful registration
+                window.location.href = '/';
             })
             .catch((err) => {
                 setError({ ...error, register: err.code });
