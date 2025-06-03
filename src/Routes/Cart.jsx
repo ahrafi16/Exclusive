@@ -42,7 +42,7 @@ const Cart = () => {
 
             {/* return to home button */}
             <div className='flex justify-between items-center gap-2 mb-15'>
-                <Link to="/home"><button className=' rounded-sm px-7 py-4  cursor-pointer border border-gray-400 hover:text-red-500 hover:bg-red-100 hover:border-red-500'>Return To Shop</button></Link>
+                <Link to="/"><button className=' rounded-sm px-7 py-4  cursor-pointer border border-gray-400 hover:text-red-500 hover:bg-red-100 hover:border-red-500'>Return To Shop</button></Link>
                 <button className=' rounded-sm px-7 py-4  cursor-pointer border border-gray-400 hover:text-red-500 hover:bg-red-100 hover:border-red-500'>Update cart</button>
             </div>
 

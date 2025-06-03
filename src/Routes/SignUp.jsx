@@ -20,7 +20,7 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 setUser(user);
-                navigate(location?.state ? location.state : "/home");
+                navigate(location?.state ? location.state : "/");
             })
             .catch((err) => {
                 setError({ ...error, login: err.code })

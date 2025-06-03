@@ -31,7 +31,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "/home",
+        index : true,
+        path: "/",
         element: <Home></Home>,
         loader: async () => {
           try {

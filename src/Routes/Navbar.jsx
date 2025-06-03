@@ -69,27 +69,33 @@ const Navbar = () => {
                             </svg>
                         </div>
                         <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <NavLink to="/home"><li>Home</li></NavLink>
+                            <NavLink to="/"><li>Home</li></NavLink>
                             <NavLink to="/contact"><li>Contact</li></NavLink>
                             <NavLink to="/about"><li>About</li></NavLink>
                             <NavLink to="/register"><li>Register</li></NavLink>
                         </ul>
                     </div>
-                    <Link to="/home"><button className='btn btn-ghost text-xl font-bold'>Exclusive</button></Link>
+                    <Link to="/"><button className='btn btn-ghost text-xl font-bold'>Exclusive</button></Link>
                 </div>
 
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        {['Home', 'Contact', 'About', 'Register'].map((item, i) => (
-                            <li key={i}>
-                                <NavLink
-                                    to={`/${item.toLowerCase().replace(' ', '')}`}
-                                    className={({ isActive }) => `px-4 py-2 ${isActive ? "underline underline-offset-8" : ""}`}
-                                >
-                                    {item}
-                                </NavLink>
-                            </li>
-                        ))}
+                        {['Home', 'Contact', 'About', 'Register'].map((item, i) => {
+                            const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`;
+                            return (
+                                <li key={i}>
+                                    <NavLink
+                                        to={path}
+                                        className={({ isActive }) =>
+                                            `px-4 py-2 ${isActive ? "underline underline-offset-8" : ""}`
+                                        }
+                                    >
+                                        {item}
+                                    </NavLink>
+                                </li>
+                            );
+                        })}
+
                     </ul>
                 </div>
 
